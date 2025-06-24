@@ -73,9 +73,9 @@ def collect_reviews_all_pages():
 product_data = []
 
 # 전체 상품 페이지 순회 (1~16페이지)
-for page in range(1, 17):
+for page in range(22, 32):
     print(f"📄 페이지 {page} 처리 중...")
-    page_url = f"https://www.oliveyoung.co.kr/store/display/getMCategoryList.do?dispCatNo=100000100010013&fltDispCatNo=&prdSort=02&pageIdx={page}&rowsPerPage=24&searchTypeSort=btn_thumb"
+    page_url = f"https://www.oliveyoung.co.kr/store/display/getMCategoryList.do?dispCatNo=100000100010015&fltDispCatNo=&prdSort=02&pageIdx={page}&rowsPerPage=24&searchTypeSort=btn_thumb"
     driver.get(page_url)
     time.sleep(2)
 
@@ -131,6 +131,6 @@ for page in range(1, 17):
             continue
 
 df = pd.DataFrame(product_data)
-df.to_csv("oliveyoung_all_products_reviews.csv", index=False, encoding="utf-8-sig")
+df.to_csv("oliveyoung_cream_22_31.csv", index=False, encoding="utf-8-sig")
 print("✅ 전체 페이지의 모든 제품 크롤링 완료")
 driver.quit()
