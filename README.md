@@ -18,7 +18,7 @@
           <img alt="Image" src="https://github.com/user-attachments/assets/34487cd1-40bb-4e69-9401-8cccecf5e93f" width="200px;" alt="이유나"/>
       </td>
       <td align="center">
-          <img alt="Image" src="https://github.com/user-attachments/assets/f247de64-1ce8-48a0-af7c-0ecc783f3e99" width="200px;" alt="이재범"/>
+          <img alt="Image" src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN13-3rd-3Team/blob/docs/img/%EB%9A%9C%EB%B9%84.jpg" width="200px;" alt="이재범"/>
       </td>
       <td align="center">
         <img alt="Image" src="https://github.com/user-attachments/assets/1c4c8983-2d93-4ae1-a3fd-0ac036b51ffa" width="200px;" alt="장진슬" />
