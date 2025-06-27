@@ -116,7 +116,7 @@
 --------------------------------------------
 # 3. Architecture - 시스템 아키텍처 구성도
 
-<img src="https://github.com/user-attachments/assets/9091055a-90c4-4417-baa6-bf5e9cf13c05"/>
+<img src="https://github.com/user-attachments/assets/9091055a-90c4-4417-baa6-bf5e9cf13c05" width="400px;"/>
 
 --------------------------------------------
 
