@@ -18,7 +18,7 @@
           <img alt="Image" src="https://github.com/user-attachments/assets/45796174-9990-4019-97e7-7e25ab8be320" width="200px;" alt="이유나"/>
       </td>
       <td align="center">
-          <img alt="Image" src="https://github.com/user-attachments/assets/f36f36f5-a23d-4417-8679-a2c6abc8c9db" width="200px;" alt="이재범"/>
+          <img alt="Image" src="https://github.com/user-attachments/assets/578428a5-427f-44df-8629-8fd05072f7f7" width="200px;" alt="이재범"/>
       </td>
       <td align="center">
         <img alt="Image" src="https://github.com/user-attachments/assets/453997b3-74e1-4573-92d9-569968b68461" width="200px;" alt="장진슬" />
@@ -30,22 +30,22 @@
     <tr>
        <td align="center">
        <a href="https://github.com/yunawawa">
-         <img src="https://img.shields.io/badge/GitHub-yunawawa-F1BFCA?logo=github" alt="이유나 GitHub"/>
+         <img src="https://img.shields.io/badge/GitHub-yunawawa-FEFFAB?logo=github" alt="이유나 GitHub"/>
        </a>
        </td>
        <td align="center">
        <a href="https://github.com/iPad7">
-         <img src="https://img.shields.io/badge/GitHub-iPad7-CDE990?logo=github" alt="이재범 GitHub"/>
+         <img src="https://img.shields.io/badge/GitHub-iPad7-8CFF89?logo=github" alt="이재범 GitHub"/>
        </a>
        </td>
        <td align="center">
        <a href="https://github.com/Jennie-ai333">
-         <img src="https://img.shields.io/badge/GitHub-Jennie--ai333-9AC5F4?logo=github" alt="장진슬 GitHub"/>
+         <img src="https://img.shields.io/badge/GitHub-Jennie--ai333-FFAFB0?logo=github" alt="장진슬 GitHub"/>
        </a>
        </td>
        <td align="center">
        <a href="https://github.com/JI0617">
-         <img src="https://img.shields.io/badge/GitHub-JI0617-FFD59E?logo=github" alt="지형우 GitHub"/>
+         <img src="https://img.shields.io/badge/GitHub-JI0617-DFA4FF?logo=github" alt="지형우 GitHub"/>
        </a>
        </td>
     </tr>
