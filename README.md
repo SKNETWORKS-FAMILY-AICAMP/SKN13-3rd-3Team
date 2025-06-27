@@ -139,17 +139,63 @@
 
 # Data Search
 ✅ 주요 기술 스택
-데이터 수집: Selenium 기반 크롤링 (올리브영 약 2,500개 제품 + 리뷰 약 100만 건)
-
+데이터 수집: Selenium 기반 크롤링 
 데이터 전처리: 정규표현식 기반 텍스트 클리닝, 제품명/브랜드 정제
 
-감정분석: 어떻게 했는지 쓰기 
+# Preprocessing
+## cleansing, outliers, and missing values
+1. 결측치를 제거합니다.
+2. 제품명에 들어간 불필요한 요소를 전처리합니다.
+    - ‘리필’ 또는 ‘기획’이 들어간 경우 데이터 포인트 자체를 제거합니다.
+    - 괄호(`[]`, `()` 등)와 괄호 안의 문자열을 제거합니다.
+    - 제품명에 증정품 관련 문자열이 있는 경우 제거한 후, 사실상 같은 제품이었다고 판단되는 것들을 하나로 합칩니다.
+    - ‘A사 a 로션 + 토너 50ml’의 경우 ‘ + 토너 50ml’를 제품명에서 제거합니다.
+            - e.g. <예시 사진으로 넣기>
+3. 리뷰가 100개 미만인 제품은 이상치로 간주하여 제거합니다.
+
+<img src="img/올리브영(제품명).png" width="600"/>
+
+
+### 📊 전처리 결과 요약
+
+| 카테고리 | 전처리 전 (제품 수) | 전처리 전 (리뷰 수) | 전처리 후 (제품 수) | 전처리 후 (리뷰 수) |
+|----------|--------------------|----------------------|---------------------|----------------------|
+| 스킨/토너 (skin/toner)   | 358                | 140,848              | 170                 | 120,397              |
+| 크림 (cream)            | 690                | 342,479              | 404                 | 286,631              |
+| 에센스/세럼/앰플 (essence) | 774                | 379,155              | 424                 | 315,268              |
+| 로션 (lotion)           | 236                | 85,432               | 116                 | 75,085               |
+| 크림 (cream)            | 690                | 342,479              | 404                 | 286,631              |
+| 미스트/오일 (mist/oil)    | 86                 | 38,627               | 47                  | 34,872               |
+| **총합**                | **2,144**          | **986,541**          | **1,161**           | **832,253**          |
+
+
+## 🧠 감성 분석 (Sentiment Analysis)
+본 프로젝트에서는 한국어 리뷰에 대한 감정 분류를 위해 iPad7/kcbert-base-sentiment-0.1b 모델을 활용하였습니다. <br>
+이 모델은 한국어에 특화된 KcBERT 기반 감성 분류기로, 리뷰 데이터를 긍정/부정/중립으로 자동 분류합니다.
+
+✅ 사용한 도구
+🤗 HuggingFace Transformers pipeline
+kcbert-base-sentiment-0.1b 사전학습 모델
+
+✅ 리뷰 데이터 일괄 처리 및 저장
+🤗 HuggingFace에 저장 - 약 300만건의 데이터 
+
+
+1. 학습 표본(X_train)을 추출합니다
+2. 표본에서 학습에 활용할 ground truth label(y_train)을 생성합니다.
+    - `gpt-4.1` 을 활용하여 LLM-based Few-shot Learning을 수행합니다.
+    - `gpt-4.1`에 전달할 프롬프트가 굉장히 중요할 것 같습니다.
+3. HuggingFace Hub Pre-trained Sentiment Analysis 모델을 미세조정합니다.
+    - `beomi/kcbert-base`, `klue/roberta-large`, `tabularisai/multilingual-semtiment-analysis` , etc.
+    - LoRA(Low-Rank Adaptation)
+4. 전체 데이터의 label을 예측합니다.
+ 
 
 메타데이터 생성: 키워드 + 감정분석 기반 메타 태깅 (피부타입, 고민, 제형, 자극도 등)
 
-백엔드: Chroma 벡터스토어 기반 LangChain RAG
+모델: HuggingFaceEmbeddings
+model_name="jhgan/ko-sbert-nli"
 
-모델: <> 기반 감정 분류 모델, SentenceTransformer 임베딩
 
 응답 시스템: 사용자 쿼리에 따른 조건 검색 + 유사도 검색 + LLM 응답 조합
 
@@ -171,15 +217,6 @@
 
 --------------------------------------------
   
-## Sentiment Analysis
-1. 학습 표본(X_train)을 추출합니다(총 n개의 문장. 2천 개 정도면 되려나요?)
-2. 표본에서 학습에 활용할 ground truth label(y_train)을 생성합니다.
-    - `gpt-4.1` 을 활용하여 LLM-based Few-shot Learning을 수행합니다.
-    - `gpt-4.1`에 전달할 프롬프트가 굉장히 중요할 것 같습니다.
-3. HuggingFace Hub Pre-trained Sentiment Analysis 모델을 미세조정합니다.
-    - `beomi/kcbert-base`, `klue/roberta-large`, `tabularisai/multilingual-semtiment-analysis` , etc.
-    - LoRA(Low-Rank Adaptation)
-4. 전체 데이터의 label을 예측합니다.
 
 
 
