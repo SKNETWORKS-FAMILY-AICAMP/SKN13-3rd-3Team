@@ -30,22 +30,22 @@
     <tr>
        <td align="center">
        <a href="https://github.com/yunawawa">
-         <img src="https://img.shields.io/badge/GitHub-yunawawa-F1BFCA?logo=github" alt="이유나 GitHub"/>
+         <img src="https://img.shields.io/badge/GitHub-yunawawa-FEFFAB?logo=github" alt="이유나 GitHub"/>
        </a>
        </td>
        <td align="center">
        <a href="https://github.com/iPad7">
-         <img src="https://img.shields.io/badge/GitHub-iPad7-CDE990?logo=github" alt="이재범 GitHub"/>
+         <img src="https://img.shields.io/badge/GitHub-iPad7-8CFF89?logo=github" alt="이재범 GitHub"/>
        </a>
        </td>
        <td align="center">
        <a href="https://github.com/Jennie-ai333">
-         <img src="https://img.shields.io/badge/GitHub-Jennie--ai333-9AC5F4?logo=github" alt="장진슬 GitHub"/>
+         <img src="https://img.shields.io/badge/GitHub-Jennie--ai333-FFAFB0?logo=github" alt="장진슬 GitHub"/>
        </a>
        </td>
        <td align="center">
        <a href="https://github.com/JI0617">
-         <img src="https://img.shields.io/badge/GitHub-JI0617-FFD59E?logo=github" alt="지형우 GitHub"/>
+         <img src="https://img.shields.io/badge/GitHub-JI0617-DFA4FF?logo=github" alt="지형우 GitHub"/>
        </a>
        </td>
     </tr>
