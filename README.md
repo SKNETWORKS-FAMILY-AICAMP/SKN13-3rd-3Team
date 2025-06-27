@@ -5,14 +5,54 @@
 💡 프로젝트명:
 "_____” – 내 피부에 맞는 기초화장품을 빠르게, 똑똑하게 추천해주는 리뷰 기반 AI 챗봇
 
-| 이름  | 이미지                                       | 이메일               |
-|:------:|:-------------------------------------------:|:--------------------:|
-| 이유나 |<img src=>      | @gmail.com |
-| 이재범 | <img src=>        | @gmail.com |
-| 장진슬 | <img src=>       | @gmail.com |
-| 지형우 | <img src=>   | @gmail.com |
-
-<\br><\br>
+<table align=center>
+  <tbody>
+   <tr>
+      <td align=center><b>이유나</b></td>
+      <td align=center><b>이재범</b></td>
+      <td align=center><b>장진슬</b></td>
+      <td align=center><b>지형우</b></td>
+    </tr>
+    <tr>
+      <td align="center">
+          <img alt="Image" src="https://github.com/user-attachments/assets/34487cd1-40bb-4e69-9401-8cccecf5e93f" width="200px;" alt="이유나"/>
+      </td>
+      <td align="center">
+          <img alt="Image" src="https://github.com/user-attachments/assets/f247de64-1ce8-48a0-af7c-0ecc783f3e99" width="200px;" alt="이재범"/>
+      </td>
+      <td align="center">
+        <img alt="Image" src="https://github.com/user-attachments/assets/1c4c8983-2d93-4ae1-a3fd-0ac036b51ffa" width="200px;" alt="장진슬" />
+      </td>
+      <td align="center">
+        <img alt="Image" src="https://github.com/user-attachments/assets/3df16775-13d3-490d-8cc4-4e5492044c63" width="200px;" alt="지형우"/>
+      </td>
+    </tr>
+    <tr>
+       <td align="center">
+       <a href="https://github.com/yunawawa">
+         <img src="https://img.shields.io/badge/GitHub-yunawawa-F1BFCA?logo=github" alt="이유나 GitHub"/>
+       </a>
+       </td>
+       <td align="center">
+       <a href="https://github.com/iPad7">
+         <img src="https://img.shields.io/badge/GitHub-iPad7-CDE990?logo=github" alt="이재범 GitHub"/>
+       </a>
+       </td>
+       <td align="center">
+       <a href="https://github.com/Jennie-ai333">
+         <img src="https://img.shields.io/badge/GitHub-Jennie-ai333-9AC5F4?logo=github" alt="장진슬 GitHub"/>
+       </a>
+       </td>
+       <td align="center">
+       <a href="https://github.com/JI0617">
+         <img src="https://img.shields.io/badge/GitHub-JI0617-FFD59E?logo=github" alt="지형우 GitHub"/>
+       </a>
+       </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br><br>
 
 
 
