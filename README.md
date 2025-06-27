@@ -35,7 +35,7 @@
        </td>
        <td align="center">
        <a href="https://github.com/iPad7">
-         <img src="https://img.shields.io/badge/GitHub-iPad7-8CFF89?logo=github" alt="이재범 GitHub"/>
+         <img src="https://img.shields.io/badge/GitHub-iPad7-B9FF92?logo=github" alt="이재범 GitHub"/>
        </a>
        </td>
        <td align="center">
@@ -45,7 +45,7 @@
        </td>
        <td align="center">
        <a href="https://github.com/JI0617">
-         <img src="https://img.shields.io/badge/GitHub-JI0617-DFA4FF?logo=github" alt="지형우 GitHub"/>
+         <img src="https://img.shields.io/badge/GitHub-JI0617-BD9FFF?logo=github" alt="지형우 GitHub"/>
        </a>
        </td>
     </tr>
