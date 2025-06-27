@@ -40,7 +40,7 @@
        </td>
        <td align="center">
        <a href="https://github.com/Jennie-ai333">
-         <img src="https://img.shields.io/badge/GitHub-Jennie-ai333-9AC5F4?logo=github" alt="장진슬 GitHub"/>
+         <img src="https://img.shields.io/badge/GitHub-Jennie--ai333-9AC5F4?logo=github" alt="장진슬 GitHub"/>
        </a>
        </td>
        <td align="center">
