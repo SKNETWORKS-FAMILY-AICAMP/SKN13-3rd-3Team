@@ -117,7 +117,7 @@
 # 3. System Architecture
 
 <p align="center">
-  <img src="system_architecture.png" width="550"/>
+  <img src="img/system_architecture.png" width="550"/>
 </p>
 
 --------------------------------------------
