@@ -114,9 +114,9 @@
 - 기존 제품의 문제점(예: 트러블, 끈적임 등)을 미리 파악하고, 대체 제품을 함께 제안하여 구매 리스크 완화<br><br>
 
 --------------------------------------------
-# 3. Architecture - 시스템 아키텍처 구성도
+# 3. System Architecture
 
-<img src="https://github.com/user-attachments/assets/9091055a-90c4-4417-baa6-bf5e9cf13c05" width="600px;"/>
+<img src= "img/system architecture.png", width="600px"/>
 
 --------------------------------------------
 
