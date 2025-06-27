@@ -15,16 +15,16 @@
     </tr>
     <tr>
       <td align="center">
-          <img alt="Image" src="https://github.com/user-attachments/assets/34487cd1-40bb-4e69-9401-8cccecf5e93f" width="200px;" alt="이유나"/>
+          <img alt="Image" src="https://github.com/user-attachments/assets/45796174-9990-4019-97e7-7e25ab8be320" width="200px;" alt="이유나"/>
       </td>
       <td align="center">
-          <img alt="Image" src="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN13-3rd-3Team/blob/docs/img/%EB%9A%9C%EB%B9%84.jpg" width="200px;" alt="이재범"/>
+          <img alt="Image" src="https://github.com/user-attachments/assets/f36f36f5-a23d-4417-8679-a2c6abc8c9db" width="200px;" alt="이재범"/>
       </td>
       <td align="center">
-        <img alt="Image" src="https://github.com/user-attachments/assets/1c4c8983-2d93-4ae1-a3fd-0ac036b51ffa" width="200px;" alt="장진슬" />
+        <img alt="Image" src="https://github.com/user-attachments/assets/453997b3-74e1-4573-92d9-569968b68461" width="200px;" alt="장진슬" />
       </td>
       <td align="center">
-        <img alt="Image" src="https://github.com/user-attachments/assets/3df16775-13d3-490d-8cc4-4e5492044c63" width="200px;" alt="지형우"/>
+        <img alt="Image" src="https://github.com/user-attachments/assets/dce5e0cc-c634-4689-a814-3d14ecb8e3eb" width="200px;" alt="지형우"/>
       </td>
     </tr>
     <tr>
