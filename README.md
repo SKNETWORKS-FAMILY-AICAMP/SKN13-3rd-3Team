@@ -116,24 +116,7 @@
 --------------------------------------------
 # 3. Architecture - 시스템 아키텍처 구성도
 
-[User Input]
-     ⬇  
-[Natural Language Query]
-     ⬇  
-[Keyword + Emotion 분석]  
-     ⬇  
-[Retriever]
-  └─  /  벡터DB
-        (리뷰 텍스트 + 메타데이터 기반)
-     ⬇  
-[Top-K 리뷰 추출]
-     ⬇  
-[Prompt Template + Context Injection]
-     ⬇  
-[LLM (OpenAI GPT / Ko-LLM 등)]
-     ⬇  
-[Final Answer 생성]
-
+<img src="https://github.com/user-attachments/assets/9091055a-90c4-4417-baa6-bf5e9cf13c05"/>
 
 --------------------------------------------
 
