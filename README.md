@@ -1,5 +1,4 @@
 # SKN13-3rd-3Team
-[SK Networks Family AI Camp 13th] 3rd mini project
 
 ## 1. Introduce Team
 ### 💡 프로젝트명:
@@ -198,7 +197,7 @@
 
 
 
-
+--------------------------------------------
 ## 8. RAG-based QA Chatbot 구현 
 
 형우 챗봇 구현 캡쳐 올리기 
