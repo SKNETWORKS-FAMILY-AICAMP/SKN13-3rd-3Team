@@ -180,8 +180,10 @@
 --------------------------------------------
 ## 5. Model
 
-* 모델: HuggingFaceEmbeddings
+* 모델: HuggingFaceEmbeddings <br>
 **model_name="jhgan/ko-sbert-nli"**
+  - 한국어 자연어 이해(NLU)에 최적화된 BERT 기반 임베딩 구성
+  - Mean pooling을 활용하여 문장 수준 특징을 효과적으로 집계
 
 
 ## 6. Vector DB
@@ -225,6 +227,5 @@ Step 3. 답변 생성
   - 패션, 생필품, 전자기기 등 다양한 소비재 영역
 
 * 향후 확장 방향
-  - 유튜브 자막, 블로그, SNS 텍스트 등 외부 데이터와 결합
   - 이커머스, 브랜드 마케팅, 소비자 리서치 등 다양한 분야에 활용
 
