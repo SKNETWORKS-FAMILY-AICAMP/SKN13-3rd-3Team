@@ -4,7 +4,7 @@
 ### 💡 프로젝트명: 기초 화장품 추천 챗봇 
  – 내 피부에 맞는 기초화장품을 빠르게, 똑똑하게 추천해주는 리뷰 기반 AI 챗봇
 <br/><br/>
-####                  꼬꼬마팀
+####           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;꼬꼬마팀
 <table align=center>
   <tbody>
    <tr>
