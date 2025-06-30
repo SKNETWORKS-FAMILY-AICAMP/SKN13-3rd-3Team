@@ -160,8 +160,7 @@
 </p>
 
 <p align="center">
-  <img src="img/올리브영(크롤링범위).png" width="380" style="margin-right: 200px;"/>
-  <img src="img/올리브영(피부타입+피부고민+자극도+후기).png" width="380"/>
+<img src="img/올리브영(화장품성분).png" width="600"/>
 </p>
 
 <br>
