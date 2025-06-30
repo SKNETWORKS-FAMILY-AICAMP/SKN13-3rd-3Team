@@ -125,10 +125,15 @@
 3. Document.metadata 태깅을 위한 처리
     - 제품 카테고리
     - 리뷰의 감성(Sentiment)
-      
+
+<p align="center">
 <img src="img/올리브영(제품명).png" width="600"/>
-<img src="img/올리브영(크롤링범위).png" width="600"/>
-<img src="올리브영(피부타입+피부고민+자극도+후기).png" width="600"/>
+</p>
+
+<p align="center">
+  <img src="img/올리브영(크롤링범위).png" width="450"/>
+  <img src="img/올리브영(피부타입+피부고민+자극도+후기).png" width="450"/>
+</p>
 
 <br>
 
