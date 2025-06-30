@@ -142,15 +142,19 @@
 | 미스트/오일 (mist/oil)    | 84                 | 37,266               | 47                  | 34,872               |
 | **총합**                | **2,832**          | **1,327,219**          | **1,565**           | **1,118,884**          |
 
+<br>
 
 ### 4.2 entence-level tokenizing
   - kss 라이브러리 기반 토크나이징: kss.split_sentences
 
+<br>
 
 ### 4.3 Sampling
   - 상품 카테고리 별 리뷰 비율 최대한 반영하여 총 2천 문장의 학습 표본 추출
   > 크림 600개, 에센스 600개, 로션 200개, 미스트 200개, 스킨 200개
   - 데이터 라벨링: GPT-4.1-based Few-shot Learning
+    
+<br>
 
 ### 4.4 FullFineTuning 
   - beomi/kcbert-base 모델에 리뷰-감성 샘플 기반 Full Fine-tuning
@@ -163,6 +167,7 @@
   > 본 프로젝트에서는 한국어 리뷰에 대한 감정 분류를 위해 iPad7/kcbert-base-sentiment-0.1b 모델을 활용
   > 이 모델은 한국어에 특화된 KcBERT 기반 감성 분류기로, 리뷰 데이터를 긍정/부정/중립으로 자동 분류
 
+<br>
 
 ### 4.5 Sentiment Analysis
 
@@ -172,7 +177,9 @@
     - `beomi/kcbert-base`, `klue/roberta-large`, `tabularisai/multilingual-semtiment-analysis` , etc.
     - LoRA(Low-Rank Adaptation)
 4. 전체 데이터의 label을 예측
- 
+
+<br>
+
 ### 4.6 최종 데이터
 
 * 약 309만 개 데이터 수집. 각 데이터포인트의 '리뷰' 값은 실제 리뷰 속의 1개 문장
@@ -189,6 +196,7 @@
   - 한국어 자연어 이해(NLU)에 최적화된 BERT 기반 임베딩 구성
   - Mean pooling을 활용하여 문장 수준 특징을 효과적으로 집계
 
+<br>
 
 ## 6. Vector DB
 
@@ -198,6 +206,8 @@
 - Chroma 대비 벡터 삽입 속도가 약 3~5배 빨라졌으며, 검색 속도는 10배 이상 개선됨
 - 검색 정확도와 일관성도 동일 수준 이상을 유지
 - 대규모 배포나 RAG 시스템 통합 시 병목 구간이 제거됨
+
+<br>
 
 ## 7. RAG - Chain + tool
 
