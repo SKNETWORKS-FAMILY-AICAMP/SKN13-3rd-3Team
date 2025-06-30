@@ -3,6 +3,7 @@
 ## 1. Introduce Team
 ### 💡 프로젝트명: 기초 화장품 추천 챗봇 
  – 내 피부에 맞는 기초화장품을 빠르게, 똑똑하게 추천해주는 리뷰 기반 AI 챗봇
+<br/><br/>
 
 <table align=center>
   <tbody>
@@ -51,7 +52,7 @@
   </tbody>
 </table>
 <br>
-<br><br>
+<br/><br/>
 
 
 
@@ -60,6 +61,7 @@
 🧐 **"생각해보지 않았지만 우리 모두의 불편함 : 내 피부에 맞는 기초 화장품 찾기가 어렵다!"** <br>
 
 💄 화장품을 구매하려고 올리브영 오프라인 혹은 온라인 매장을 방문하면, 수 많은 제품들에게 압도당해 어떤 제품이 내 피부에 맞는지 판단하기 힘들다. 
+
 > 😟 새로운 제품을 시도할 때 실패에 대한 불안과 기회비용, 시간의 부담 발생<br>
 > 🎥 유튜브 ‘추천템’은 광고성 비중이 커 신뢰도 낮고, 탐색 비용이 큼<br>
 
@@ -70,7 +72,9 @@
 
 
 📊 올리브영 스킨케어 제품에 대한 데이터를 크롤링해서 132만 건 수집, 감성분석을 진행하여 최종적으로 309만 건의 데이터 구축 <br>
+
 🧠 **LLM 기반 RAG(Retrieval-Augmented Generation)** 구조로 **기초 화장품 추천 챗봇**을 구현. <br>
+
 > 사용자의 **피부타입, 피부고민, 선호제형, 민감도**등 다양한 조건을 바탕으로 사용자의 피부 조건에 맞는 제품 추천 및 리뷰 요약, 트렌드, 사용자 불만 요소까지 제공 <br>
 <br>
 
@@ -98,7 +102,34 @@
   - 반복적이고 비효율적인 탐색 과정을 챗봇 한 번의 질의로 대체<br><br>
   - 리뷰 기반의 객관적 정보에 따라 합리적인 제품 선택을 유도 <br>
 
-<br><br>
+
+
+### 2.2.3 🛠️ 사용한 기술 스택
+<br/><br/>
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white">
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white">
+  <img src="https://img.shields.io/badge/JSON-5E5C5C?style=for-the-badge&logo=json&logoColor=white">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white">
+  <img src="https://img.shields.io/badge/HuggingFace-FFD21F?style=for-the-badge&logo=huggingface&logoColor=black">
+  <img src="https://img.shields.io/badge/HuggingFace_Inference_API-FFD21F?style=for-the-badge&logo=huggingface&logoColor=black">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/LangChain-000000?style=for-the-badge&logo=Chainlink&logoColor=white">
+  <img src="https://img.shields.io/badge/FAISS-0099FF?style=for-the-badge&logo=vector&logoColor=white">
+  <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=OpenAI&logoColor=white">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white">
+</p>
+<br/><br/>
+
+
 
 --------------------------------------------
 ## 3. System Architecture
