@@ -2,7 +2,9 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+.env
+crawling/
+chroma_oliveyoung_reviews/
 # C extensions
 *.so
 
@@ -191,4 +193,10 @@ cython_debug/
 #  exclude from AI features like autocomplete and code analysis. Recommended for sensitive data
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
+<<<<<<< HEAD
 .cursorindexingignoreoliveyoung_cream_22_31.csv
+=======
+.cursorindexingignore
+chroma_oliveyoung
+faiss_oliveyoung_reviews
+>>>>>>> rag
