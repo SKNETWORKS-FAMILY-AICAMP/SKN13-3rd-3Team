@@ -252,12 +252,12 @@
 ## 7. RAG-based QA Chatbot 구현 
 
 ### How to Use
-<p align="center">
-<img src="img/챗봇1.png" width="600"/>
+<p align="left">
+<img src="img/챗봇1.png" width="900"/>
 </p>
 
-<p align="center">
-<img src="img/챗봇2.png" width="600"/>
+<p align="left">
+<img src="img/챗봇2.png" width="900"/>
 </p>
 
 💬 Step 1. 질문 입력
