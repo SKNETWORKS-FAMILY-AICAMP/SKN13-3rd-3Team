@@ -227,7 +227,7 @@
 ## 5. Model
 
 * 모델: HuggingFaceEmbeddings <br>
-**model_name="jhgan/ko-sbert-nli"**
+**model_name="jhgan/ko-sbert-nli"** <br>
   - 문장 수준 의미를 효과적으로 반영하는 한국어 임베딩 모델
   - Mean pooling을 활용하여 문장 수준 특징을 효과적으로 집계
 
