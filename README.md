@@ -253,11 +253,11 @@
 
 ### How to Use
 <p align="left">
-<img src="img/챗봇1.png" width="900"/>
+<img src="img/챗봇1.png" width="1100"/>
 </p>
 
 <p align="left">
-<img src="img/챗봇2.png" width="900"/>
+<img src="img/챗봇2.png" width="1100"/>
 </p>
 
 💬 Step 1. 질문 입력
