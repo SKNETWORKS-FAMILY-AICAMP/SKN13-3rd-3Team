@@ -222,6 +222,7 @@
   > 각 데이터포인트의 '리뷰' 값은 실제 리뷰 속의 1개 문장
 * 총 9개의 특징으로 요약
   > '제품명', '성분', '별점', '피부타입', '피부고민', '자극도', '카테고리', '리뷰', '리뷰_감성'
+* [HuggingFace_최종 데이터](https://huggingface.co/datasets/iPad7/SKN13-3rd-3Team-labeled-datasets-with-first-model)
 
 <br><br>
 
@@ -244,6 +245,8 @@
 
 - Chroma 대비 벡터 삽입 속도가 약 3~5배 빨라졌으며, 검색 속도는 10배 이상 개선됨
 - 검색 정확도와 일관성도 동일 수준 이상을 유지
+
+* [HuggingFace_FAISS DB](https://huggingface.co/datasets/yunawawa/faiss_oliveyoung/tree/main)
 
 <br><br>
 
