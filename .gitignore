@@ -2,9 +2,10 @@
 __pycache__/
 *.py[cod]
 *$py.class
-.env
+.env*
 crawling/
 chroma_oliveyoung_reviews/
+.DS_Store
 # C extensions
 *.so
 
@@ -200,3 +201,4 @@ cython_debug/
 chroma_oliveyoung
 faiss_oliveyoung_reviews
 >>>>>>> rag
+
