@@ -3,7 +3,7 @@ from streamlit.web import cli as stcli
 import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", "rag"))
-import main
+import test
 
 @pytest.mark.parametrize("prompt", [
     "건성 피부에 좋은 에센스 추천해줘",
@@ -19,7 +19,7 @@ def test_chatbot_runs(prompt, monkeypatch):
     monkeypatch.setenv("OPENAI_API_KEY", "test-api-key")
 
     # 챗봇 객체 생성
-    chain = main.get_chatbot()
+    chain = test.get_chatbot()
     assert chain is not None
 
     # 체인 실행 (Dummy prompt)
