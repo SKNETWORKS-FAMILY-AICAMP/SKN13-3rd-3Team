@@ -40,5 +40,4 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           HF_API_KEY: ${{ secrets.HF_API_KEY }}
-        run: |
-          pytest -v
+        run: pytest -vv --maxfail=1 --disable-warnings
