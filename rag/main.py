@@ -25,36 +25,36 @@ if "storage" not in st.session_state:
 
 # 챗봇 객체 생성 함수
 @st.cache_resource
-def get_chatbot():
+def get_chatbot(faiss_path: str = None, pkl_path: str = None):
     def get_session_history(session_id):
         if session_id not in st.session_state.storage:
             st.session_state.storage[session_id] = InMemoryChatMessageHistory()
         return st.session_state.storage[session_id]
 
+    # 테스트용 경로가 없으면 Hugging Face에서 다운로드
+    if faiss_path is None:
+        faiss_path = hf_hub_download(
+            repo_id="user5810830/faiss_oliveyoung_reviews",
+            filename="index.faiss",
+            repo_type="dataset",
+            local_dir="./tmp",
+            local_dir_use_symlinks=False,
+            token=os.getenv("HUGGINGFACE_API_KEY")
+        )
 
-    # 모델 및 벡터스토어 불러오기
-    # index.faiss 다운로드
-    faiss_file = hf_hub_download(repo_id="user5810830/faiss_oliveyoung_reviews",
-                                 filename="index.faiss",
-                                 repo_type="dataset",
-                                 local_dir="./tmp",
-                                 local_dir_use_symlinks=False,
-                                 token=os.getenv("HUGGINGFACE_API_KEY"))
-    
-    pkl_file = hf_hub_download(
-        repo_id="user5810830/faiss_oliveyoung_reviews",
-        filename="index.pkl",
-        repo_type="dataset",
-        token=os.getenv("HUGGINGFACE_API_KEY")
-    )
+    if pkl_path is None:
+        pkl_path = hf_hub_download(
+            repo_id="user5810830/faiss_oliveyoung_reviews",
+            filename="index.pkl",
+            repo_type="dataset",
+            token=os.getenv("HUGGINGFACE_API_KEY")
+        )
 
-    with open(pkl_file, "rb") as f:
+    with open(pkl_path, "rb") as f:
         index = pickle.load(f)
 
-    # embedding_model = HuggingFaceEmbeddings(model_name="jhgan/ko-sbert-nli")
-
     vector_db = FAISS.load_local(
-        folder_path=os.path.dirname(faiss_file),
+        folder_path=os.path.dirname(faiss_path),
         embeddings=index.embeddings,
         allow_dangerous_deserialization=True
     )
