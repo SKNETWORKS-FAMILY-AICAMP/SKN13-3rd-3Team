@@ -33,7 +33,7 @@ def get_chatbot():
 
     # 모델 및 벡터스토어 불러오기
     # index.faiss 다운로드
-    faiss_path = hf_hub_download(repo_id="user5810830/faiss_oliveyoung_reviews", filename="index.faiss", token=os.getenv("HUGGINGFACE_API_KEY"))
+    faiss_path = hf_hub_download(repo_id="datasets/user5810830/faiss_oliveyoung_reviews", filename="index.faiss", token=os.getenv("HUGGINGFACE_API_KEY"))
 
     embedding_model = HuggingFaceEmbeddings(model_name="jhgan/ko-sbert-nli")
     vector_db = FAISS.load_local(faiss_path, embedding_model)
