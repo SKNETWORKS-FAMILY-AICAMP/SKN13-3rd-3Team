@@ -11,6 +11,7 @@ from langchain.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 from huggingface_hub import hf_hub_download
 import os
+import pickle
 
 
 # 환경변수 로드
@@ -33,13 +34,28 @@ def get_chatbot():
 
     # 모델 및 벡터스토어 불러오기
     # index.faiss 다운로드
-    faiss_path = hf_hub_download(repo_id="user5810830/faiss_oliveyoung_reviews",
+    faiss_file = hf_hub_download(repo_id="user5810830/faiss_oliveyoung_reviews",
                                  filename="index.faiss",
                                  repo_type="dataset",
                                  token=os.getenv("HUGGINGFACE_API_KEY"))
+    
+    pkl_file = hf_hub_download(
+        repo_id="user5810830/faiss_oliveyoung_reviews",
+        filename="index.pkl",
+        repo_type="dataset",
+        token=os.getenv("HUGGINGFACE_API_KEY")
+    )
 
-    embedding_model = HuggingFaceEmbeddings(model_name="jhgan/ko-sbert-nli")
-    vector_db = FAISS.load_local(faiss_path, embedding_model)
+    with open(pkl_file, "rb") as f:
+        index = pickle.load(f)
+
+    # embedding_model = HuggingFaceEmbeddings(model_name="jhgan/ko-sbert-nli")
+
+    vector_db = FAISS.load_local(
+        folder_path=os.path.dirname(faiss_file),
+        embeddings=index.embeddings,
+        allow_dangerous_deserialization=True
+    )
 
     # LLM
     llm = ChatOpenAI(model='gpt-4.1', temperature=0.7)
