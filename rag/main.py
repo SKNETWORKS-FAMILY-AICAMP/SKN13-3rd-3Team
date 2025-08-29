@@ -37,6 +37,8 @@ def get_chatbot():
     faiss_file = hf_hub_download(repo_id="user5810830/faiss_oliveyoung_reviews",
                                  filename="index.faiss",
                                  repo_type="dataset",
+                                 local_dir="./tmp",
+                                 local_dir_use_symlinks=False,
                                  token=os.getenv("HUGGINGFACE_API_KEY"))
     
     pkl_file = hf_hub_download(
