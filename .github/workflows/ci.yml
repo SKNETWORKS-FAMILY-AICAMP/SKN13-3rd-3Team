@@ -40,5 +40,5 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           HF_API_KEY: ${{ secrets.HF_API_KEY }}
-          run: PYTHONPATH=$PYTHONPATH:./rag pytest -vv -s --tb=long --maxfail=1 --disable-warnings
+        run: PYTHONPATH=$PYTHONPATH:./rag pytest -vv -s --tb=long --maxfail=1 --disable-warnings
         continue-on-error: true
