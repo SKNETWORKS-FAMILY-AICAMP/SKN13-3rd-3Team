@@ -6,3 +6,5 @@ langchain-openai==0.3.25
 langchain-huggingface==0.3.0
 sentence-transformers==4.1.0
 torch>=2.0.0
+langchain-core==0.3.66
+
