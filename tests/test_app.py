@@ -2,7 +2,8 @@ import pytest
 from streamlit.web import cli as stcli
 import os
 import sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../rag')))
+sys.path.append(os.path.join(os.path.dirname(__file__), "..", "rag"))
+import main
 
 @pytest.mark.parametrize("prompt", [
     "건성 피부에 좋은 에센스 추천해줘",
@@ -16,9 +17,6 @@ def test_chatbot_runs(prompt, monkeypatch):
 
     # 환경 변수가 없을 때를 대비해서
     monkeypatch.setenv("OPENAI_API_KEY", "test-api-key")
-
-    # 모듈 import
-    import main  # streamlit 코드가 들어있는 파일명 (예: app.py)
 
     # 챗봇 객체 생성
     chain = main.get_chatbot()
