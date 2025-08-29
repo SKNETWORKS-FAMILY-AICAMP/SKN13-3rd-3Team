@@ -1,6 +1,8 @@
 import pytest
 from streamlit.web import cli as stcli
+import os
 import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../rag')))
 
 @pytest.mark.parametrize("prompt", [
     "건성 피부에 좋은 에센스 추천해줘",
