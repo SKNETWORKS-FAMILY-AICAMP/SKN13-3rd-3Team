@@ -7,6 +7,12 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.runnables import RunnablePassthrough, RunnableWithMessageHistory
 from langchain_core.chat_history import InMemoryChatMessageHistory
 from langchain_core.output_parsers import StrOutputParser
+from langchain.vectorstores import FAISS
+from langchain_huggingface import HuggingFaceEmbeddings
+from huggingface_hub import hf_hub_download
+import os
+import pickle
+
 
 # 환경변수 로드
 load_dotenv()
@@ -19,17 +25,37 @@ if "storage" not in st.session_state:
 
 # 챗봇 객체 생성 함수
 @st.cache_resource
-def get_chatbot():
+def get_chatbot(faiss_path: str = None, pkl_path: str = None):
     def get_session_history(session_id):
         if session_id not in st.session_state.storage:
             st.session_state.storage[session_id] = InMemoryChatMessageHistory()
         return st.session_state.storage[session_id]
 
-    # 모델 및 벡터스토어 불러오기
-    embedding_model = HuggingFaceEmbeddings(model_name="jhgan/ko-sbert-nli")
+    # 테스트용 경로가 없으면 Hugging Face에서 다운로드
+    if faiss_path is None:
+        faiss_path = hf_hub_download(
+            repo_id="user5810830/faiss_oliveyoung_reviews",
+            filename="index.faiss",
+            repo_type="dataset",
+            local_dir="./tmp",
+            local_dir_use_symlinks=False,
+            token=os.getenv("HUGGINGFACE_API_KEY")
+        )
+
+    if pkl_path is None:
+        pkl_path = hf_hub_download(
+            repo_id="user5810830/faiss_oliveyoung_reviews",
+            filename="index.pkl",
+            repo_type="dataset",
+            token=os.getenv("HUGGINGFACE_API_KEY")
+        )
+
+    with open(pkl_path, "rb") as f:
+        index = pickle.load(f)
+
     vector_db = FAISS.load_local(
-        "faiss_oliveyoung_reviews",
-        embedding_model,
+        folder_path=os.path.dirname(faiss_path),
+        embeddings=index.embeddings,
         allow_dangerous_deserialization=True
     )
 

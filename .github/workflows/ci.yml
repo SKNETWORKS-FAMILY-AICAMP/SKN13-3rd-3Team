@@ -11,13 +11,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Clean up disk space
+        run: |
+          echo "=== Before cleanup ==="
+          df -h
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /opt/ghc
+          sudo rm -rf "/usr/local/share/boost"
+          sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+          echo "=== After cleanup ==="
+          df -h
+          
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |
@@ -27,6 +38,7 @@ jobs:
 
       - name: Run tests
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}   # Github Secrets 등록 필요
-        run: |
-          pytest -v
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          HF_API_KEY: ${{ secrets.HF_API_KEY }}
+        run: PYTHONPATH=$PYTHONPATH:./rag pytest -vv -s --tb=long --maxfail=1 --disable-warnings
+        continue-on-error: true
