@@ -4,7 +4,7 @@ import pytest
 from huggingface_hub import hf_hub_download
 from langchain.vectorstores import FAISS
 
-from main import get_chatbot
+from test import get_chatbot
 
 @pytest.fixture(scope="module")
 def faiss_and_pkl_paths():
