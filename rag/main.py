@@ -7,6 +7,11 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.runnables import RunnablePassthrough, RunnableWithMessageHistory
 from langchain_core.chat_history import InMemoryChatMessageHistory
 from langchain_core.output_parsers import StrOutputParser
+from langchain.vectorstores import FAISS
+from langchain_huggingface import HuggingFaceEmbeddings
+from huggingface_hub import hf_hub_download
+
+
 
 # 환경변수 로드
 load_dotenv()
@@ -25,13 +30,13 @@ def get_chatbot():
             st.session_state.storage[session_id] = InMemoryChatMessageHistory()
         return st.session_state.storage[session_id]
 
+
     # 모델 및 벡터스토어 불러오기
+    # index.faiss 다운로드
+    faiss_path = hf_hub_download(repo_id="username/oliveyoung-faiss", filename="index.faiss")
+
     embedding_model = HuggingFaceEmbeddings(model_name="jhgan/ko-sbert-nli")
-    vector_db = FAISS.load_local(
-        "faiss_oliveyoung_reviews",
-        embedding_model,
-        allow_dangerous_deserialization=True
-    )
+    vector_db = FAISS.load_local(faiss_path, embedding_model)
 
     # LLM
     llm = ChatOpenAI(model='gpt-4.1', temperature=0.7)
